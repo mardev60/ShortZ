@@ -33,7 +33,7 @@ export class VideoGeneratorComponent {
       this.error = null;
       this.videoUrl = null;
 
-      this.http.post<{ videoUrl: string }>('/api/generate-video', {
+      this.http.post<{ videoUrl: string }>('http://localhost:3000/api/generate-video', {
         topic: this.videoForm.value.topic
       }).subscribe({
         next: (response) => {
